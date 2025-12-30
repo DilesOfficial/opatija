@@ -1,109 +1,101 @@
-@import "@fontsource/playfair-display/400.css";
-@import "@fontsource/playfair-display/500.css";
-@import "@fontsource/playfair-display/600.css";
-@import "@fontsource/playfair-display/700.css";
-@import "@fontsource/inter/300.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Luxury cream and gold palette */
+    /* Deep luxury palette inspired by The Luxury Travel Agency */
     --background: 40 33% 98%;
-    --foreground: 220 25% 12%;
+    --foreground: 220 30% 15%;
 
-    --card: 40 25% 96%;
-    --card-foreground: 220 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
 
-    --popover: 40 33% 98%;
-    --popover-foreground: 220 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
 
     /* Deep navy primary */
-    --primary: 220 35% 18%;
+    --primary: 230 45% 15%;
     --primary-foreground: 40 33% 98%;
 
     /* Warm cream secondary */
-    --secondary: 40 25% 92%;
-    --secondary-foreground: 220 25% 15%;
+    --secondary: 40 25% 94%;
+    --secondary-foreground: 220 30% 15%;
 
     --muted: 40 20% 90%;
     --muted-foreground: 220 15% 45%;
 
-    /* Elegant gold accent */
-    --accent: 38 70% 50%;
-    --accent-foreground: 220 25% 12%;
+    /* Rich gold accent */
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 30% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 40 33% 98%;
 
     --border: 40 20% 88%;
     --input: 40 20% 88%;
-    --ring: 38 70% 50%;
+    --ring: 38 75% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
     /* Custom luxury tokens */
-    --gold: 38 70% 50%;
-    --gold-light: 40 60% 70%;
-    --gold-dark: 38 75% 35%;
-    --navy: 220 35% 18%;
-    --navy-light: 220 25% 30%;
+    --gold: 38 75% 55%;
+    --gold-light: 40 65% 70%;
+    --gold-dark: 38 80% 40%;
+    --navy: 230 45% 15%;
+    --navy-light: 230 35% 25%;
     --cream: 40 33% 98%;
-    --cream-dark: 40 25% 92%;
+    --cream-dark: 40 25% 94%;
+    --emerald: 158 64% 32%;
 
     /* Sidebar */
     --sidebar-background: 40 25% 96%;
-    --sidebar-foreground: 220 25% 12%;
-    --sidebar-primary: 220 35% 18%;
+    --sidebar-foreground: 220 30% 15%;
+    --sidebar-primary: 230 45% 15%;
     --sidebar-primary-foreground: 40 33% 98%;
     --sidebar-accent: 40 25% 90%;
-    --sidebar-accent-foreground: 220 25% 12%;
+    --sidebar-accent-foreground: 220 30% 15%;
     --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 38 70% 50%;
+    --sidebar-ring: 38 75% 55%;
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 230 30% 8%;
     --foreground: 40 25% 95%;
 
-    --card: 220 25% 12%;
+    --card: 230 30% 12%;
     --card-foreground: 40 25% 95%;
 
-    --popover: 220 25% 10%;
+    --popover: 230 30% 10%;
     --popover-foreground: 40 25% 95%;
 
     --primary: 40 25% 95%;
-    --primary-foreground: 220 25% 10%;
+    --primary-foreground: 230 30% 10%;
 
-    --secondary: 220 20% 18%;
+    --secondary: 230 25% 18%;
     --secondary-foreground: 40 25% 95%;
 
-    --muted: 220 20% 20%;
+    --muted: 230 20% 20%;
     --muted-foreground: 40 15% 65%;
 
-    --accent: 38 70% 55%;
-    --accent-foreground: 220 25% 8%;
+    --accent: 38 75% 55%;
+    --accent-foreground: 230 30% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 40 25% 95%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 38 70% 55%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 38 75% 55%;
 
-    --sidebar-background: 220 25% 10%;
+    --sidebar-background: 230 30% 10%;
     --sidebar-foreground: 40 25% 95%;
-    --sidebar-primary: 38 70% 55%;
-    --sidebar-primary-foreground: 220 25% 8%;
-    --sidebar-accent: 220 20% 18%;
+    --sidebar-primary: 38 75% 55%;
+    --sidebar-primary-foreground: 230 30% 8%;
+    --sidebar-accent: 230 25% 18%;
     --sidebar-accent-foreground: 40 25% 95%;
-    --sidebar-border: 220 20% 20%;
-    --sidebar-ring: 38 70% 55%;
+    --sidebar-border: 230 20% 20%;
+    --sidebar-ring: 38 75% 55%;
   }
 }
 
@@ -140,11 +132,36 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Script/cursive font class */
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  /* Decorative line before/after text */
+  .line-decoration {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .line-decoration::before,
+  .line-decoration::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  }
 }
 
-/* Smooth scrolling */
+/* Force LTR layout regardless of language (keep site layout consistent) */
 html {
   scroll-behavior: smooth;
+  direction: ltr !important;
+}
+
+body {
+  direction: ltr !important;
 }
 
 /* Custom scrollbar */

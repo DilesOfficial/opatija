@@ -8,34 +8,55 @@ import { useLanguage } from "@/contexts/LanguageContext";
 // Import all destination hero images
 import heroGreece from "@/assets/hero-greece.jpg";
 import heroItaly from "@/assets/hero-italy.jpg";
-import heroPoland from "@/assets/hero-poland.jpg";
 import heroAustria from "@/assets/hero-austria.jpg";
 import heroUAE from "@/assets/hero-uae.jpg";
-import heroSriLanka from "@/assets/hero-srilanka.jpg";
 import heroPhilippines from "@/assets/hero-philippines.jpg";
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const { t, isRTL } = useLanguage();
+  const { t } = useLanguage();
 
-  const destinations = [
-    { nameKey: "dest.greece", taglineKey: "dest.greece.tagline", image: heroGreece },
-    { nameKey: "dest.italy", taglineKey: "dest.italy.tagline", image: heroItaly },
-    { nameKey: "dest.poland", taglineKey: "dest.poland.tagline", image: heroPoland },
-    { nameKey: "dest.austria", taglineKey: "dest.austria.tagline", image: heroAustria },
-    { nameKey: "dest.uae", taglineKey: "dest.uae.tagline", image: heroUAE },
-    { nameKey: "dest.srilanka", taglineKey: "dest.srilanka.tagline", image: heroSriLanka },
-    { nameKey: "dest.philippines", taglineKey: "dest.philippines.tagline", image: heroPhilippines },
+  const slides = [
+    { 
+      image: heroGreece,
+      headline: t("hero.slide1.headline"),
+      subheadline: t("hero.slide1.subheadline"),
+      description: t("hero.slide1.description")
+    },
+    { 
+      image: heroItaly,
+      headline: t("hero.slide2.headline"),
+      subheadline: t("hero.slide2.subheadline"),
+      description: t("hero.slide2.description")
+    },
+    { 
+      image: heroAustria,
+      headline: t("hero.slide3.headline"),
+      subheadline: t("hero.slide3.subheadline"),
+      description: t("hero.slide3.description")
+    },
+    { 
+      image: heroUAE,
+      headline: t("hero.slide4.headline"),
+      subheadline: t("hero.slide4.subheadline"),
+      description: t("hero.slide4.description")
+    },
+    { 
+      image: heroPhilippines,
+      headline: t("hero.slide5.headline"),
+      subheadline: t("hero.slide5.subheadline"),
+      description: t("hero.slide5.description")
+    },
   ];
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % destinations.length);
-  }, [destinations.length]);
+    setCurrentIndex((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + destinations.length) % destinations.length);
-  }, [destinations.length]);
+    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  }, [slides.length]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -45,11 +66,11 @@ const HeroSection = () => {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
-  const currentDestination = destinations[currentIndex];
+  const currentSlide = slides[currentIndex];
 
   return (
     <section
@@ -60,35 +81,35 @@ const HeroSection = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
           className="absolute inset-0"
         >
           <img
-            src={currentDestination.image}
-            alt={`Luxury travel destination - ${t(currentDestination.nameKey)}`}
+            src={currentSlide.image}
+            alt="Luxury travel destination"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/40 to-navy/80" />
         </motion.div>
       </AnimatePresence>
 
       {/* Navigation Arrows */}
       <button
-        onClick={isRTL ? nextSlide : prevSlide}
-        className="absolute start-2 sm:start-4 md:start-8 z-20 p-2 sm:p-3 rounded-full bg-background/10 backdrop-blur-sm border border-border/20 text-primary-foreground hover:bg-background/20 transition-all"
-        aria-label="Previous destination"
+        onClick={prevSlide}
+        className="absolute start-4 md:start-8 z-20 p-3 rounded-full bg-background/10 backdrop-blur-sm border border-gold/20 text-primary-foreground hover:bg-background/20 hover:border-gold/40 transition-all"
+        aria-label="Previous slide"
       >
-        {isRTL ? <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />}
+        <ChevronLeft className="w-5 h-5" />
       </button>
       <button
-        onClick={isRTL ? prevSlide : nextSlide}
-        className="absolute end-2 sm:end-4 md:end-8 z-20 p-2 sm:p-3 rounded-full bg-background/10 backdrop-blur-sm border border-border/20 text-primary-foreground hover:bg-background/20 transition-all"
-        aria-label="Next destination"
+        onClick={nextSlide}
+        className="absolute end-4 md:end-8 z-20 p-3 rounded-full bg-background/10 backdrop-blur-sm border border-gold/20 text-primary-foreground hover:bg-background/20 hover:border-gold/40 transition-all"
+        aria-label="Next slide"
       >
-        {isRTL ? <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />}
+        <ChevronRight className="w-5 h-5" />
       </button>
 
       {/* Content */}
@@ -99,89 +120,60 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="max-w-4xl mx-auto"
         >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-sans text-gold-light tracking-[0.2em] sm:tracking-[0.3em] uppercase text-xs sm:text-sm mb-4 sm:mb-6"
-          >
-            {t("hero.tagline")}
-          </motion.p>
-
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-2 sm:mb-4 leading-tight">
-                {t("hero.discover")}
-                <span className="block text-gradient-gold">{t(currentDestination.nameKey)}</span>
+              {/* Script Headline */}
+              <h1 className="font-script text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-primary-foreground mb-4 leading-tight">
+                {currentSlide.headline}
               </h1>
-              <p className="font-sans text-primary-foreground/80 text-base sm:text-xl md:text-2xl mb-4 sm:mb-8 italic px-2">
-                {t(currentDestination.taglineKey)}
+              
+              {/* Decorative Line with Subheadline */}
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <span className="hidden sm:block flex-1 max-w-[100px] h-px bg-gradient-to-r from-transparent to-gold/60" />
+                <p className="font-sans text-primary-foreground/90 text-sm sm:text-base md:text-lg tracking-[0.15em] uppercase">
+                  {currentSlide.subheadline}
+                </p>
+                <span className="hidden sm:block flex-1 max-w-[100px] h-px bg-gradient-to-l from-transparent to-gold/60" />
+              </div>
+              
+              {/* Description */}
+              <p className="font-sans text-primary-foreground/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                {currentSlide.description}
               </p>
             </motion.div>
           </AnimatePresence>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="font-sans text-primary-foreground/70 text-sm sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 hidden sm:block"
-          >
-            {t("hero.description")}
-          </motion.p>
-
-          {/* Destination Indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-10 px-2"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {destinations.map((destination, index) => (
-              <button
-                key={destination.nameKey}
-                onClick={() => goToSlide(index)}
-                className={`px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm rounded-full font-sans border transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-gold text-navy border-gold"
-                    : "bg-gold/20 text-gold-light border-gold/30 hover:bg-gold/30"
-                }`}
-              >
-                {t(destination.nameKey)}
-              </button>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
-          >
-            <Button variant="luxury" size="lg" className="sm:size-xl text-sm sm:text-base" asChild>
+            <Button variant="gold" size="lg" className="text-sm tracking-wider" asChild>
               <Link to="/contact">{t("hero.cta.plan")}</Link>
             </Button>
-            <Button variant="heroOutline" size="lg" className="sm:size-xl text-sm sm:text-base" asChild>
-              <Link to="/experiences">{t("hero.cta.explore")}</Link>
+            <Button variant="heroOutline" size="lg" className="text-sm tracking-wider" asChild>
+              <Link to="/about">{t("hero.cta.story")}</Link>
             </Button>
           </motion.div>
         </motion.div>
       </div>
 
       {/* Progress Dots */}
-      <div className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 sm:gap-2">
-        {destinations.map((_, index) => (
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? "w-6 sm:w-8 bg-gold"
+                ? "w-8 bg-gold"
                 : "bg-primary-foreground/40 hover:bg-primary-foreground/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -194,15 +186,15 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.5 }}
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center text-primary-foreground/60"
         >
-          <span className="text-xs tracking-widest uppercase mb-2">{t("hero.scroll")}</span>
-          <ChevronDown size={24} />
+          <span className="text-xs tracking-widest uppercase mb-2">Scroll</span>
+          <ChevronDown size={20} />
         </motion.div>
       </motion.div>
     </section>

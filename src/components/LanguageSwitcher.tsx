@@ -11,7 +11,7 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-white/10 transition-all text-sm font-medium overflow-hidden"
+      className="flex items-center gap-1.5 text-sm font-medium text-gold transition-all"
       aria-label={language === "en" ? "Switch to Hebrew" : "Switch to English"}
     >
       <AnimatePresence mode="wait">

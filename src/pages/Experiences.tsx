@@ -5,64 +5,92 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroExperiences from "@/assets/hero-experiences.jpg";
 import wineImage from "@/assets/experience-wine.jpg";
 import italyImage from "@/assets/experience-italy.jpg";
 import wellnessImage from "@/assets/experience-wellness.jpg";
 import drivingImage from "@/assets/experience-driving.jpg";
 
-const experiences = [
-  {
-    title: "Mediterranean Discovery",
-    location: "Greece & Italy",
-    description: "Explore the cradle of civilization with island hopping in Greece and coastal drives along the Amalfi. From the white-washed villages of Santorini to the ancient ruins of Rome, experience Mediterranean luxury at its finest.",
-    image: italyImage,
-    duration: "10-14 Days",
-    highlights: ["Greek island hopping", "Amalfi Coast drive", "Wine tasting in Tuscany", "Private yacht experiences"]
-  },
-  {
-    title: "Culinary Immersion",
-    location: "Italy & Austria",
-    description: "Experience authentic European cuisine with local chefs in Italian countryside villas and Viennese coffee houses. Learn traditional recipes, visit local markets, and savor the finest regional delicacies.",
-    image: wineImage,
-    duration: "7-10 Days",
-    highlights: ["Cooking classes", "Truffle hunting in Italy", "Vienna coffee culture", "Wine estate visits"]
-  },
-  {
-    title: "Wellness Retreat",
-    location: "Sri Lanka & Philippines",
-    description: "Rejuvenate body and soul with yoga, meditation, and spa treatments in serene Asian destinations. Our wellness retreats combine ancient Ayurvedic practices with pristine island beaches for complete transformation.",
-    image: wellnessImage,
-    duration: "7-14 Days",
-    highlights: ["Ayurvedic spa in Sri Lanka", "Beach yoga in Philippines", "Meditation retreats", "Healthy cuisine"]
-  },
-  {
-    title: "Alpine Adventure",
-    location: "Austria & Poland",
-    description: "Thrilling adventures through breathtaking alpine landscapes with luxury stays. Experience the romance of the Austrian Alps, explore historic Polish cities, and discover the natural beauty of Central Europe.",
-    image: drivingImage,
-    duration: "5-8 Days",
-    highlights: ["Alpine hiking & skiing", "Historic Krakow tours", "5-star mountain lodges", "Scenic train journeys"]
-  },
-  {
-    title: "Desert & Luxury",
-    location: "UAE",
-    description: "Experience the ultimate in modern luxury combined with timeless desert adventures. From the iconic skyline of Dubai to serene desert camps under the stars, discover the magic of the Arabian Peninsula.",
-    image: italyImage,
-    duration: "5-7 Days",
-    highlights: ["Dubai luxury shopping", "Desert safari adventures", "Abu Dhabi culture", "World-class dining"]
-  },
-];
-
 const Experiences = () => {
+  const { t } = useLanguage();
+
+  const experiences = [
+    {
+      titleKey: "experiences.mediterranean.title",
+      locationKey: "experiences.mediterranean.location",
+      descKey: "experiences.mediterranean.desc",
+      image: italyImage,
+      durationKey: "experiences.mediterranean.duration",
+      highlightKeys: [
+        "experiences.mediterranean.h1",
+        "experiences.mediterranean.h2",
+        "experiences.mediterranean.h3",
+        "experiences.mediterranean.h4"
+      ]
+    },
+    {
+      titleKey: "experiences.culinary.title",
+      locationKey: "experiences.culinary.location",
+      descKey: "experiences.culinary.desc",
+      image: wineImage,
+      durationKey: "experiences.culinary.duration",
+      highlightKeys: [
+        "experiences.culinary.h1",
+        "experiences.culinary.h2",
+        "experiences.culinary.h3",
+        "experiences.culinary.h4"
+      ]
+    },
+    {
+      titleKey: "experiences.wellness.title",
+      locationKey: "experiences.wellness.location",
+      descKey: "experiences.wellness.desc",
+      image: wellnessImage,
+      durationKey: "experiences.wellness.duration",
+      highlightKeys: [
+        "experiences.wellness.h1",
+        "experiences.wellness.h2",
+        "experiences.wellness.h3",
+        "experiences.wellness.h4"
+      ]
+    },
+    {
+      titleKey: "experiences.alpine.title",
+      locationKey: "experiences.alpine.location",
+      descKey: "experiences.alpine.desc",
+      image: drivingImage,
+      durationKey: "experiences.alpine.duration",
+      highlightKeys: [
+        "experiences.alpine.h1",
+        "experiences.alpine.h2",
+        "experiences.alpine.h3",
+        "experiences.alpine.h4"
+      ]
+    },
+    {
+      titleKey: "experiences.desert.title",
+      locationKey: "experiences.desert.location",
+      descKey: "experiences.desert.desc",
+      image: italyImage,
+      durationKey: "experiences.desert.duration",
+      highlightKeys: [
+        "experiences.desert.h1",
+        "experiences.desert.h2",
+        "experiences.desert.h3",
+        "experiences.desert.h4"
+      ]
+    },
+  ];
+
   return (
     <main className="min-h-screen">
       <Navbar />
       
       <PageHeroBanner
-        tagline="Signature Journeys"
-        title="Boutique Experiences"
-        description="Some journeys are stories – filled with taste, color, people, and moments that stay with you. Every boutique experience is crafted to touch the senses across our featured destinations worldwide."
+        tagline={t("experiences.page.tagline")}
+        title={t("experiences.page.title")}
+        description={t("experiences.page.description")}
         image={heroExperiences}
         imageAlt="Beautiful sunset over tropical mountains and sea"
       />
@@ -73,7 +101,7 @@ const Experiences = () => {
           <div className="space-y-24">
             {experiences.map((exp, index) => (
               <motion.div
-                key={exp.title}
+                key={exp.titleKey}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -84,36 +112,36 @@ const Experiences = () => {
                   <div className="relative rounded-xl overflow-hidden group">
                     <img
                       src={exp.image}
-                      alt={exp.title}
+                      alt={t(exp.titleKey)}
                       className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
                     <div className="absolute bottom-6 left-6">
                       <span className="font-sans text-gold-light tracking-widest uppercase text-xs">
-                        {exp.duration}
+                        {t(exp.durationKey)}
                       </span>
                     </div>
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                   <p className="font-sans text-gold tracking-widest uppercase text-sm mb-2">
-                    {exp.location}
+                    {t(exp.locationKey)}
                   </p>
                   <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-                    {exp.title}
+                    {t(exp.titleKey)}
                   </h2>
                   <p className="font-sans text-muted-foreground leading-relaxed mb-6">
-                    {exp.description}
+                    {t(exp.descKey)}
                   </p>
                   <div className="mb-6">
-                    <h4 className="font-sans text-sm text-foreground font-medium mb-3">Highlights</h4>
+                    <h4 className="font-sans text-sm text-foreground font-medium mb-3">{t("experiences.highlights")}</h4>
                     <div className="flex flex-wrap gap-2">
-                      {exp.highlights.map((highlight) => (
+                      {exp.highlightKeys.map((highlightKey) => (
                         <span
-                          key={highlight}
+                          key={highlightKey}
                           className="px-3 py-1 bg-gold/10 text-gold rounded-full text-sm font-sans"
                         >
-                          {highlight}
+                          {t(highlightKey)}
                         </span>
                       ))}
                     </div>
@@ -122,7 +150,7 @@ const Experiences = () => {
                     to="/contact"
                     className="inline-flex items-center gap-2 font-sans text-gold hover:text-gold-dark transition-colors group"
                   >
-                    <span>Inquire About This Experience</span>
+                    <span>{t("experiences.inquire")}</span>
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -143,17 +171,16 @@ const Experiences = () => {
             className="max-w-2xl mx-auto"
           >
             <p className="font-sans text-gold tracking-[0.3em] uppercase text-sm mb-4">
-              Custom Journeys
+              {t("experiences.custom.tagline")}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
-              Looking for Something Unique?
+              {t("experiences.custom.title")}
             </h2>
             <p className="font-sans text-muted-foreground mb-8">
-              Can't find exactly what you're looking for? Let us craft a bespoke experience 
-              tailored entirely to your preferences across Greece, Italy, Poland, Austria, UAE, Sri Lanka, or the Philippines.
+              {t("experiences.custom.desc")}
             </p>
             <Button variant="gold" size="xl" asChild>
-              <Link to="/contact">Design My Journey</Link>
+              <Link to="/contact">{t("experiences.custom.button")}</Link>
             </Button>
           </motion.div>
         </div>
