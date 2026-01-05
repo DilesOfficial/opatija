@@ -392,8 +392,8 @@ const translations = {
     "personal.occasion.solo": "Solo Journeys of Discovery",
     "personal.peace.title": "Peace of Mind, Every Step of the Way",
     "personal.peace.p1": "Travel should feel effortless. We stay connected with our global partners and monitor every detail behind the scenes so your trip unfolds smoothly from start to finish. From seamless adjustments to thoughtful guidance and on-the-ground support, our team is here to ensure your journey feels easy, secure, and completely taken care of.",
-    "personal.peace.p2": "We're not just planning itineraries — we're protecting your time, elevating your experience, and giving you true peace of mind wherever you go.",
-    "personal.quote": "Personal travel is for those who value quality, clarity, and a calm, well-managed experience — created entirely around them.",
+    "personal.peace.p2": "We're not just planning itineraries - we're protecting your time, elevating your experience, and giving you true peace of mind wherever you go.",
+    "personal.quote": "Personal travel is for those who value quality, clarity, and a calm, well-managed experience - created entirely around them.",
     "personal.cta": "Start Planning Your Journey",
     
     // Elite Journeys Page
