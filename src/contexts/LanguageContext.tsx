@@ -27,7 +27,7 @@ const translations = {
     // Hero Section
     "hero.tagline": "Luxury Travel Experiences",
     "hero.discover": "Discover",
-    "hero.description": "Your worldwide travel partner – crafting unforgettable journeys across our curated destinations.",
+    "hero.description": "Your worldwide travel partner - crafting unforgettable journeys across our curated destinations.",
     "hero.cta.plan": "Plan Your Journey",
     "hero.cta.explore": "Explore Experiences",
     "hero.cta.story": "Discover Our Story",
@@ -256,7 +256,7 @@ const translations = {
     "services.boutique.f4": "Expert local guides",
     "services.boutique.f5": "Unique accommodations",
     "services.family.title": "Family & Group Operations",
-    "services.family.desc": "Complete solutions for groups and families. We handle all logistics – flights, accommodations, transportation, guides – so you can simply enjoy the journey. Perfect for multi-generational trips to Poland, Austria, or island hopping in Greece.",
+    "services.family.desc": "Complete solutions for groups and families. We handle all logistics - flights, accommodations, transportation, guides - so you can simply enjoy the journey. Perfect for multi-generational trips to Poland, Austria, or island hopping in Greece.",
     "services.family.f1": "Multi-generational planning",
     "services.family.f2": "Group coordination",
     "services.family.f3": "Private transportation",
@@ -273,7 +273,7 @@ const translations = {
     // Experiences Page
     "experiences.page.tagline": "Signature Journeys",
     "experiences.page.title": "Boutique Experiences",
-    "experiences.page.description": "Some journeys are stories – filled with taste, color, people, and moments that stay with you. Every boutique experience is crafted to touch the senses across our featured destinations worldwide.",
+    "experiences.page.description": "Some journeys are stories - filled with taste, color, people, and moments that stay with you. Every boutique experience is crafted to touch the senses across our featured destinations worldwide.",
     "experiences.highlights": "Highlights",
     "experiences.inquire": "Inquire About This Experience",
     "experiences.custom.tagline": "Custom Journeys",
@@ -363,7 +363,7 @@ const translations = {
     // Personal Page
     "personal.page.tagline": "Tailored For You",
     "personal.page.title": "Personal Travel",
-    "personal.page.description": "A journey that reflects your lifestyle, preferences, and expectations – without templates or predefined paths.",
+    "personal.page.description": "A journey that reflects your lifestyle, preferences, and expectations - without templates or predefined paths.",
     "personal.intro.title": "Igniting your spirit. Pampering your soul.",
     "personal.intro.p1": "We stand out by flawlessly delivering impeccable destinations, itineraries, accommodations, and everything in between. Our exceptional team excels in understanding your requirements, providing precise recommendations, and crafting the perfect travel plan. We possess the expertise to elevate any experience to enchanting heights.",
     "personal.intro.p2": "We understand that every dream destination should consistently deliver luxurious comfort and peace of mind, no matter where your imagination takes you.",
@@ -465,7 +465,7 @@ const translations = {
     "flights.beyond.title": "Beyond Luxury",
     "flights.beyond.p1": "Private aviation is not only about luxury. It is about efficiency, trust, and confidence in the people managing your journey. Our role is to make sure every flight is handled professionally and on time.",
     "flights.beyond.p2": "From departure to arrival, every detail is managed to ensure the flight operates exactly as planned. Your time matters, and we treat it with the respect it deserves.",
-    "flights.quote": "Efficiency, trust, and confidence – the foundations of every flight we arrange.",
+    "flights.quote": "Efficiency, trust, and confidence - the foundations of every flight we arrange.",
     "flights.cta": "Inquire About Private Flights",
     
     // Boutique Page
@@ -474,7 +474,7 @@ const translations = {
     "boutique.page.description": "Handcrafted journeys featuring desert luxury, alpine adventures, Mediterranean discovery, and culinary immersion.",
     "boutique.intro.title": "Journeys crafted with intention and care.",
     "boutique.intro.p1": "Our boutique experiences are not mass-produced itineraries. Each journey is carefully designed to offer depth, authenticity, and a connection to the destination that goes beyond the surface.",
-    "boutique.intro.p2": "From the stillness of the Arabian desert to the winding roads of the Alps, from the flavors of Greece to the rolling hills of Tuscany – every experience is built around quality, precision, and your personal preferences.",
+    "boutique.intro.p2": "From the stillness of the Arabian desert to the winding roads of the Alps, from the flavors of Greece to the rolling hills of Tuscany - every experience is built around quality, precision, and your personal preferences.",
     "boutique.uae.title": "UAE Desert Luxury",
     "boutique.uae.subtitle": "Modern Elegance Meets Desert Stillness",
     "boutique.uae.intro": "The UAE offers a refined blend of modern elegance and the timeless stillness of the desert. This experience is designed for travelers who expect precision, discretion, and a fully managed journey from start to finish.",
@@ -489,7 +489,7 @@ const translations = {
     "boutique.alpine.subtitle": "Austria & Italy Driving Experience",
     "boutique.alpine.intro": "This experience is designed for those who appreciate performance, scenery, and absolute freedom of movement. A private alpine journey through Austria and Italy, combining iconic mountain roads with high-performance motor cars.",
     "boutique.alpine.content": "Each journey is custom built. Routes, driving pace, destinations, and experiences are planned according to personal preferences. The Alps offer some of the most impressive driving roads in Europe. Winding mountain passes, open stretches, dramatic views, and quiet valleys create a driving experience that feels powerful and refined. Premium vehicles, logistics, accommodations, dining, and daily coordination are fully managed.",
-    "boutique.alpine.closing": "This is not a standard car tour. It is a carefully curated alpine journey, built around quality, precision, and enjoyment – a combination of driving, scenery, service, and trust.",
+    "boutique.alpine.closing": "This is not a standard car tour. It is a carefully curated alpine journey, built around quality, precision, and enjoyment - a combination of driving, scenery, service, and trust.",
     "boutique.alpine.h1": "High-performance premium vehicles",
     "boutique.alpine.h2": "Iconic mountain passes and scenic routes",
     "boutique.alpine.h3": "Luxury alpine lodges and hotels",
@@ -515,13 +515,13 @@ const translations = {
     "boutique.tuscany.h3": "Family-owned winery visits",
     "boutique.tuscany.h4": "Truffle hunting experiences",
     "boutique.tuscany.h5": "Artisan workshop discoveries",
-    "boutique.quote": "Every boutique experience is a promise – of quality, authenticity, and moments that stay with you long after the journey ends.",
+    "boutique.quote": "Every boutique experience is a promise - of quality, authenticity, and moments that stay with you long after the journey ends.",
     "boutique.cta": "Craft Your Boutique Experience",
     
     // Contact Page
     "contact.page.tagline": "Start Your Journey",
     "contact.page.title": "Contact Us",
-    "contact.page.description": "We're here to design your next journey with precision, care, and a personal touch. Whether you dream of Greek islands, Italian villas, or Asian retreats – share a few details to help us tailor your experience.",
+    "contact.page.description": "We're here to design your next journey with precision, care, and a personal touch. Whether you dream of Greek islands, Italian villas, or Asian retreats - share a few details to help us tailor your experience.",
   },
   he: {
     // Navigation
@@ -540,7 +540,7 @@ const translations = {
     // Hero Section
     "hero.tagline": "חוויות נסיעה יוקרתיות",
     "hero.discover": "גלה את",
-    "hero.description": "השותף שלך לנסיעות ברחבי העולם – יוצרים מסעות בלתי נשכחים ביעדים הנבחרים שלנו.",
+    "hero.description": "השותף שלך לנסיעות ברחבי העולם - יוצרים מסעות בלתי נשכחים ביעדים הנבחרים שלנו.",
     "hero.cta.plan": "תכנן את המסע שלך",
     "hero.cta.explore": "גלה חוויות",
     "hero.cta.story": "גלה את הסיפור שלנו",
@@ -769,7 +769,7 @@ const translations = {
     "services.boutique.f4": "מדריכים מקומיים מומחים",
     "services.boutique.f5": "לינה ייחודית",
     "services.family.title": "פעולות משפחה וקבוצה",
-    "services.family.desc": "פתרונות מלאים לקבוצות ומשפחות. אנו מטפלים בכל הלוגיסטיקה – טיסות, לינה, תחבורה, מדריכים – כך שתוכל פשוט ליהנות מהמסע. מושלם לטיולים רב-דוריים לפולין, אוסטריה או שייט בין איים ביוון.",
+    "services.family.desc": "פתרונות מלאים לקבוצות ומשפחות. אנו מטפלים בכל הלוגיסטיקה - טיסות, לינה, תחבורה, מדריכים - כך שתוכל פשוט ליהנות מהמסע. מושלם לטיולים רב-דוריים לפולין, אוסטריה או שייט בין איים ביוון.",
     "services.family.f1": "תכנון רב-דורי",
     "services.family.f2": "תיאום קבוצות",
     "services.family.f3": "תחבורה פרטית",
@@ -786,7 +786,7 @@ const translations = {
     // Experiences Page
     "experiences.page.tagline": "מסעות ייחודיים",
     "experiences.page.title": "חוויות בוטיק",
-    "experiences.page.description": "חלק מהמסעות הם סיפורים – מלאים בטעם, צבע, אנשים ורגעים שנשארים איתך. כל חוויית בוטיק נוצרת לגעת בחושים ביעדים המובילים שלנו ברחבי העולם.",
+    "experiences.page.description": "חלק מהמסעות הם סיפורים - מלאים בטעם, צבע, אנשים ורגעים שנשארים איתך. כל חוויית בוטיק נוצרת לגעת בחושים ביעדים המובילים שלנו ברחבי העולם.",
     "experiences.highlights": "דגשים",
     "experiences.inquire": "בירור על חוויה זו",
     "experiences.custom.tagline": "מסעות מותאמים",
@@ -876,7 +876,7 @@ const translations = {
     // Personal Page
     "personal.page.tagline": "מותאם אישית עבורך",
     "personal.page.title": "נסיעות אישיות",
-    "personal.page.description": "מסע שמשקף את סגנון החיים, ההעדפות והציפיות שלך – ללא תבניות או מסלולים מוגדרים מראש.",
+    "personal.page.description": "מסע שמשקף את סגנון החיים, ההעדפות והציפיות שלך - ללא תבניות או מסלולים מוגדרים מראש.",
     "personal.intro.title": "מדליק את הרוח שלך. מפנק את הנשמה שלך.",
     "personal.intro.p1": "אנחנו בולטים על ידי מסירה מושלמת של יעדים, מסלולים, לינות וכל מה שביניהם. הצוות יוצא הדופן שלנו מצטיין בהבנת הדרישות שלך, מתן המלצות מדויקות ויצירת תוכנית הנסיעה המושלמת. יש לנו את המומחיות להעלות כל חוויה לגבהים קסומים.",
     "personal.intro.p2": "אנחנו מבינים שכל יעד חלומות צריך להעביר נוחות יוקרתית ושלוות נפש, לא משנה לאן הדמיון שלך לוקח אותך.",
@@ -905,8 +905,8 @@ const translations = {
     "personal.occasion.solo": "מסעות גילוי סולו",
     "personal.peace.title": "שקט נפשי, בכל צעד בדרך",
     "personal.peace.p1": "נסיעות צריכות להרגיש מאמץ. אנחנו נשארים מחוברים עם השותפים הגלובליים שלנו ועוקבים אחרי כל פרט מאחורי הקלעים כך שהטיול שלך יתגלגל בחלקלקות מתחילתו ועד סופו. מהתאמות חלקות ועד הדרכה מתחשבת ותמיכה בשטח, הצוות שלנו כאן לוודא שהמסע שלך מרגיש קל, מאובטח ומטופל לחלוטין.",
-    "personal.peace.p2": "אנחנו לא רק מתכננים מסלולים – אנחנו מגנים על הזמן שלך, מעלים את החוויה שלך ונותנים לך שקט נפשי אמיתי לאן שלא תלך.",
-    "personal.quote": "נסיעות אישיות הן למי שמעריך איכות, בהירות וחוויה רגועה ומנוהלת היטב – שנוצרה לחלוטין סביבם.",
+    "personal.peace.p2": "אנחנו לא רק מתכננים מסלולים - אנחנו מגנים על הזמן שלך, מעלים את החוויה שלך ונותנים לך שקט נפשי אמיתי לאן שלא תלך.",
+    "personal.quote": "נסיעות אישיות הן למי שמעריך איכות, בהירות וחוויה רגועה ומנוהלת היטב - שנוצרה לחלוטין סביבם.",
     "personal.cta": "התחל לתכנן את המסע שלך",
     
     // Elite Journeys Page
@@ -978,7 +978,7 @@ const translations = {
     "flights.beyond.title": "מעבר ליוקרה",
     "flights.beyond.p1": "תעופה פרטית היא לא רק יוקרה. זה יעילות, אמון וביטחון באנשים שמנהלים את המסע שלך. התפקיד שלנו הוא לוודא שכל טיסה מטופלת מקצועית ובזמן.",
     "flights.beyond.p2": "מהמראה ועד הנחיתה, כל פרט מנוהל כדי להבטיח שהטיסה פועלת בדיוק כמתוכנן. הזמן שלך חשוב, ואנחנו מתייחסים אליו בכבוד שהוא ראוי לו.",
-    "flights.quote": "יעילות, אמון וביטחון – היסודות של כל טיסה שאנו מסדרים.",
+    "flights.quote": "יעילות, אמון וביטחון - היסודות של כל טיסה שאנו מסדרים.",
     "flights.cta": "בירור על טיסות פרטיות",
     
     // Boutique Page
@@ -987,7 +987,7 @@ const translations = {
     "boutique.page.description": "מסעות מעוצבים ביד הכוללים יוקרת מדבר, הרפתקאות אלפיניות, גילוי ים תיכוני וטבילה קולינרית.",
     "boutique.intro.title": "מסעות שנוצרים בכוונה ובאכפתיות.",
     "boutique.intro.p1": "חוויות הבוטיק שלנו אינן מסלולים המיוצרים בהמוניהם. כל מסע מעוצב בקפידה להציע עומק, אותנטיות וחיבור ליעד שהולך מעבר לפני השטח.",
-    "boutique.intro.p2": "מהשקט של המדבר הערבי ועד הכבישים המפותלים של האלפים, מהטעמים של יוון ועד הגבעות המתגלגלות של טוסקנה – כל חוויה נבנית סביב איכות, דיוק וההעדפות האישיות שלך.",
+    "boutique.intro.p2": "מהשקט של המדבר הערבי ועד הכבישים המפותלים של האלפים, מהטעמים של יוון ועד הגבעות המתגלגלות של טוסקנה - כל חוויה נבנית סביב איכות, דיוק וההעדפות האישיות שלך.",
     "boutique.uae.title": "יוקרת מדבר איחוד האמירויות",
     "boutique.uae.subtitle": "אלגנטיות מודרנית פוגשת שקט מדברי",
     "boutique.uae.intro": "איחוד האמירויות מציע שילוב מעודן של אלגנטיות מודרנית והשקט הנצחי של המדבר. חוויה זו מעוצבת עבור מטיילים שמצפים לדיוק, סודיות ומסע מנוהל לחלוטין מתחילתו ועד סופו.",
@@ -1002,7 +1002,7 @@ const translations = {
     "boutique.alpine.subtitle": "חוויית נהיגה באוסטריה ואיטליה",
     "boutique.alpine.intro": "חוויה זו מעוצבת למי שמעריך ביצועים, נוף וחופש תנועה מוחלט. מסע אלפיני פרטי דרך אוסטריה ואיטליה, המשלב כבישי הרים אייקוניים עם מכוניות ספורט בביצועים גבוהים.",
     "boutique.alpine.content": "כל מסע נבנה בהתאמה אישית. מסלולים, קצב נהיגה, יעדים וחוויות מתוכננים לפי העדפות אישיות. האלפים מציעים כמה מכבישי הנהיגה המרשימים ביותר באירופה. מעברי הרים מפותלים, מתחים פתוחים, נופים דרמטיים ועמקים שקטים יוצרים חוויית נהיגה שמרגישה עוצמתית ומעודנת. רכבים פרימיום, לוגיסטיקה, לינות, אוכל ותיאום יומיומי מנוהלים לחלוטין.",
-    "boutique.alpine.closing": "זה לא סיור מכוניות סטנדרטי. זהו מסע אלפיני מובחר בקפידה, שנבנה סביב איכות, דיוק והנאה – שילוב של נהיגה, נוף, שירות ואמון.",
+    "boutique.alpine.closing": "זה לא סיור מכוניות סטנדרטי. זהו מסע אלפיני מובחר בקפידה, שנבנה סביב איכות, דיוק והנאה - שילוב של נהיגה, נוף, שירות ואמון.",
     "boutique.alpine.h1": "רכבי פרימיום בביצועים גבוהים",
     "boutique.alpine.h2": "מעברי הרים אייקוניים ומסלולים נופיים",
     "boutique.alpine.h3": "לודג'ים ומלונות אלפיניים יוקרתיים",
@@ -1028,13 +1028,13 @@ const translations = {
     "boutique.tuscany.h3": "ביקורים ביקבים בבעלות משפחתית",
     "boutique.tuscany.h4": "חוויות ציד כמהין",
     "boutique.tuscany.h5": "גילויי סדנאות אומנות",
-    "boutique.quote": "כל חוויית בוטיק היא הבטחה – של איכות, אותנטיות ורגעים שנשארים איתך הרבה אחרי שהמסע מסתיים.",
+    "boutique.quote": "כל חוויית בוטיק היא הבטחה - של איכות, אותנטיות ורגעים שנשארים איתך הרבה אחרי שהמסע מסתיים.",
     "boutique.cta": "צור את חוויית הבוטיק שלך",
     
     // Contact Page
     "contact.page.tagline": "התחל את המסע שלך",
     "contact.page.title": "צור קשר",
-    "contact.page.description": "אנחנו כאן לעצב את המסע הבא שלך בדיוק, אכפתיות ונגיעה אישית. בין אם אתה חולם על איים יווניים, וילות איטלקיות או נסיגות אסייתיות – שתף כמה פרטים כדי לעזור לנו להתאים את החוויה שלך.",
+    "contact.page.description": "אנחנו כאן לעצב את המסע הבא שלך בדיוק, אכפתיות ונגיעה אישית. בין אם אתה חולם על איים יווניים, וילות איטלקיות או נסיגות אסייתיות - שתף כמה פרטים כדי לעזור לנו להתאים את החוויה שלך.",
   },
 };
 

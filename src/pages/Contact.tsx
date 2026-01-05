@@ -12,7 +12,7 @@ const Contact = () => {
       <PageHeroBanner
         tagline="Start Your Journey"
         title="Contact Us"
-        description="We're here to design your next journey with precision, care, and a personal touch. Whether you dream of Greek islands, Italian villas, or Asian retreats – share a few details to help us tailor your experience."
+        description="We're here to design your next journey with precision, care, and a personal touch. Whether you dream of Greek islands, Italian villas, or Asian retreats - share a few details to help us tailor your experience."
         image={heroContact}
         imageAlt="Luxury hotel lobby with world globe"
       />
