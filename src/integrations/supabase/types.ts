@@ -14,6 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      available_flights: {
+        Row: {
+          aircraft_type: string
+          aircraft_type_he: string | null
+          arrival_city: string
+          arrival_city_he: string | null
+          available_seats: number
+          created_at: string
+          departure_city: string
+          departure_city_he: string | null
+          departure_date: string
+          departure_time: string | null
+          id: string
+          is_active: boolean
+          notes: string | null
+          notes_he: string | null
+          price_from: string | null
+          updated_at: string
+        }
+        Insert: {
+          aircraft_type: string
+          aircraft_type_he?: string | null
+          arrival_city: string
+          arrival_city_he?: string | null
+          available_seats?: number
+          created_at?: string
+          departure_city: string
+          departure_city_he?: string | null
+          departure_date: string
+          departure_time?: string | null
+          id?: string
+          is_active?: boolean
+          notes?: string | null
+          notes_he?: string | null
+          price_from?: string | null
+          updated_at?: string
+        }
+        Update: {
+          aircraft_type?: string
+          aircraft_type_he?: string | null
+          arrival_city?: string
+          arrival_city_he?: string | null
+          available_seats?: number
+          created_at?: string
+          departure_city?: string
+          departure_city_he?: string | null
+          departure_date?: string
+          departure_time?: string | null
+          id?: string
+          is_active?: boolean
+          notes?: string | null
+          notes_he?: string | null
+          price_from?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           additional_requests: string | null
@@ -68,15 +125,42 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -203,6 +287,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+    },
   },
 } as const
