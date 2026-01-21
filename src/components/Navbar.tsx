@@ -80,9 +80,9 @@ const Navbar = () => {
           {/* Right side - Language + CTA */}
           <div className="hidden xl:flex items-center gap-4">
             {/* Language Switcher with highlight */}
-            <button className="px-4 py-2 rounded-full border border-gold/40 bg-gold/10 hover:bg-gold/20 transition-all duration-300 cursor-pointer">
+            <div className="px-4 py-2 rounded-full border border-gold/40 bg-gold/10 hover:bg-gold/20 transition-all duration-300 cursor-pointer">
               <LanguageSwitcher />
-            </button>
+            </div>
             
             <Button
               variant="outline"
